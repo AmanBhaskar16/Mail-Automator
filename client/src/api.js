@@ -1,4 +1,4 @@
-const API_BASE_URL = (import.meta.env.BACKEND_URI || '').replace(/\/+$/, '');
+const API_BASE_URL = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '');
 
 async function request(url, options = {}) {
   if (import.meta.env.PROD && !API_BASE_URL) {
